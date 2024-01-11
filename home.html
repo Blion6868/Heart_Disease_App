@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="HD.css">
+
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+            background-size: cover;
+            color: black;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1, h2, h4, h6, h7 {
+            color: black;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            color: black;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        p {
+            color: black;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px; /* Adjust the width as needed */
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 250px; /* Adjust the width as needed */
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 250px; /* Adjust the width as needed */
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <h2>Please enter your medical records:</h2>
+
+    <table>
+        <form method="POST">
+            {# This hidden_tag is a CSRF security feature. #}
+            {{form.hidden_tag()}}
+            <br>
+
+            <p>
+                <label for="age">{{form.age.label}}:</label>
+                {{form.age}}<br>
+
+                <label for="sex">{{form.sex.label}}:</label>
+                {{form.sex}}<br>
+
+                <label for="cp">{{form.cp.label}}:</label>
+                {{form.cp}}<br>
+
+                <label for="trestbps">{{form.trestbps.label}}:</label>
+                {{form.trestbps}}<br>
+
+                <label for="chol">{{form.chol.label}}:</label>
+                {{form.chol}}<br>
+
+                <label for="fbs">{{form.fbs.label}}:</label>
+                {{form.fbs}}<br>
+
+                <label for="restecg">{{form.restecg.label}}:</label>
+                {{form.restecg}}<br>
+
+                <label for="thalach">{{form.thalach.label}}:</label>
+                {{form.thalach}}<br>
+
+                <label for="exang">{{form.exang.label}}:</label>
+                {{form.exang}}<br>
+
+                <label for="oldpeak">{{form.oldpeak.label}}:</label>
+                {{form.oldpeak}}<br>
+
+                <label for="slope">{{form.slope.label}}:</label>
+                {{form.slope}}<br>
+
+                <label for="ca">{{form.ca.label}}:</label>
+                {{form.ca}}<br>
+
+                <label for="thal">{{form.thal.label}}:</label>
+                {{form.thal}}<br>
+
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </table>
+
+    <h4>Notes:</h4>
+    <h6>age - age in years</h6>
+    <h6>sex - (1 = male; 0 = female)</h6>
+    <h6>cp - chest pain type (1: typical; 2: atypical; 3: non-anginal; 4: asymptomatic)</h6>
+    <h6>trestbps - resting blood pressure (in mm Hg on admission to the hospital)</h6>
+    <h6>chol - serum cholestoral in mg/dl</h6>
+    <h6>fbs - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</h6>
+    <h6>restecg - resting electrocardiographic results</h6>
+    <h6>thalach - maximum heart rate achieved</h6>
+    <h6>exang - exercise induced angina (1 = yes; 0 = no)</h6>
+    <h6>oldpeak - ST depression induced by exercise relative to rest</h6>
+    <h6>slope - the slope of the peak exercise ST segment</h6>
+    <h6>ca - number of major vessels (0-3) colored by flourosopy</h6>
+    <h6>thal - 3 = normal; 6 = fixed defect; 7 = reversable defect</h6>
+
+    <h7> dataset courtesy of Kaggle.com</h7> <br>
+
+</body>
+
+</html>
