@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+    background-image: url("https://unsplash.com/wallpapers/nature/sky");
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #eaeaea;
+  }
+  
+  .container {
+    width: 80%; /* Adjust the width of the container as needed */
+    max-width: 600px; /* Set a maximum width for better readability */
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  /* Add any additional styles as needed */
+  
